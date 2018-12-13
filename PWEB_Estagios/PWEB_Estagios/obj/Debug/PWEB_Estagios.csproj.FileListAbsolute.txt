@@ -359,3 +359,9 @@ C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\o
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.pdb
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.GenerateResource.cache
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo.resources
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.GenerateResource.Cache
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo01.resources
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo03.resources
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo04.resources
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model04.resources

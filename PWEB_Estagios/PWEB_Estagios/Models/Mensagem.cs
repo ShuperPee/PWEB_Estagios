@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PWEB_Estagios.Models
 {
-    //[Table("Mensagens")]
+    [Table("Mensagens")]
     public class Mensagem
     {
         //[Required]

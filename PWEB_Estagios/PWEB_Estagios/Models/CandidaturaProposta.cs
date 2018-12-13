@@ -7,22 +7,21 @@ using System.Web;
 
 namespace PWEB_Estagios.Models
 {
-    //[Table("Candidaturas")]
+    [Table("Candidaturas")]
     public class CandidaturaProposta
     {
-        //[Required]
+        [Required]
         //[Key]
-        //[Display(Name = "Numero de Candidatura")]
+        [Display(Name = "Numero de Candidatura")]
         public int CandidaturaPropostaId { get; set; }
 
-        //[Required]
-        //[ForeignKey("Proposta")]
+        [Required]
+        [ForeignKey("Proposta")]
         public int PropostaId { get; set; }
-
         public Proposta Proposta { get; set; }
 
-        //[Required]
-        //[ForeignKey("Aluno")]
+        [Required]
+        [ForeignKey("Aluno")]
         public int AlunoId { get; set; }
 
         public Aluno Aluno { get; set; }

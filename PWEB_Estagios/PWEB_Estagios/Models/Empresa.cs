@@ -9,19 +9,19 @@ namespace PWEB_Estagios.Models
     public class Empresa
     {
 
-        //[Required]
+        [Required]
         //[Key]
-        //[Display(Name = "Numero de Empresa")]
+        [Display(Name = "Numero de Empresa")]
         public int EmpresaId { get; set; }
-        //[Required]
-        //[MaxLength(100)]
-        //[Display(Name = "Nome")]
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Nome")]
         public string Nome { get; set; }
-        //[Required]
-        //[MaxLength(100)]
+        [Required]
+        [MaxLength(100)]
         public string Sede { get; set; }
-        //[Required]
-        //[MaxLength(100)]
+        [Required]
+        [MaxLength(100)]
         public string Email { get; set; }
         public IList<Proposta> Propostas { get; set; }
     }

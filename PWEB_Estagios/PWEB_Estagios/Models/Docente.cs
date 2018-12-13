@@ -8,22 +8,22 @@ namespace PWEB_Estagios.Models
 {
     public class Docente
     {
-        //[Required]
+        [Required]
         //[Key]
-        //[Display(Name = "Numero de Docente")]
+        [Display(Name = "Numero de Docente")]
         public int DocenteId { get; set; }
 
-        //[Required]
-        //[MaxLength(100)]
-        //[Display(Name = "Primeiro Nome")]
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Primeiro Nome")]
         public string PrimeiroNome { get; set; }
 
-        //[Required]
-        //[MaxLength(100)]
-        //[Display(Name = "Ultimo Nome")]
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Ultimo Nome")]
         public string Apelido { get; set; }
 
-        //[Required]
+        [Required]
         public string Email { get; set; }
 
         public Boolean Comisao { get; set; } = false;
