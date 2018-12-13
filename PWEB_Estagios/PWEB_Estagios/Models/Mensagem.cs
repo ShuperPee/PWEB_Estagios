@@ -7,24 +7,24 @@ using System.Web;
 
 namespace PWEB_Estagios.Models
 {
-    [Table("Mensagens")]
+    //[Table("Mensagens")]
     public class Mensagem
     {
-        [Required]
-        [Key]
+        //[Required]
+        //[Key]
         public int MensagemID { get; set; }
 
-        [Required]
-        [ForeignKey("Aluno")]
+        //[Required]
+        //[ForeignKey("Aluno")]
         public int AlunoId { get; set; }
 
-        [Required]
+        //[Required]
         public Aluno Aluno { get; set; }
 
-        [Required]
+        //[Required]
         public IList<Docente> Docentes { get; set; }
 
-        [Required]
+        //[Required]
         public string Texto { get; set; }
     }
 }
