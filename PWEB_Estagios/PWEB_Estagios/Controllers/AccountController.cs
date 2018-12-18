@@ -142,6 +142,7 @@ namespace PWEB_Estagios.Controllers
         public ActionResult Register()
         {
             ViewBag.Perfis = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name", "Name");
+            
             return View();
         }
 

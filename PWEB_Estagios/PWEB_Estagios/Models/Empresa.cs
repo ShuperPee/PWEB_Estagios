@@ -10,15 +10,17 @@ namespace PWEB_Estagios.Models
     public class Empresa
     {
 
-        [Required]
+        //[Required]
         //[Key]
         [Display(Name = "Numero de Empresa")]
         public int EmpresaId { get; set; }
+
         [Required]
         [MaxLength(100)]
-        [Display(Name = "Nome")]
+        //[Display(Name = "Nome")]
         public string Nome { get; set; }
-        [Required]
+   
+        //[Required]
         [MaxLength(100)]
         public string Sede { get; set; }
         [Required]
@@ -30,5 +32,10 @@ namespace PWEB_Estagios.Models
         public string UserId { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
+
+        public Empresa()
+        {
+
+        }
     }
 }

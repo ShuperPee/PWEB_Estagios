@@ -17,7 +17,7 @@ namespace PWEB_Estagios.Models
 
         [Required]
         [MaxLength(100)]
-        [Display(Name = "Primeiro Nome")]
+        //[Display(Name = "Primeiro Nome")]
         public string PrimeiroNome { get; set; }
 
         [Required]
@@ -29,17 +29,17 @@ namespace PWEB_Estagios.Models
         [MaxLength(100)]
         public string Email { get; set; }
 
-        [Required]
+        //[Required]
         public Ramo? Ramo { get; set; }
 
         public IList<CandidaturaProposta> CandidaturaProposta { get; set; }
         
         
-        [Required]
+        //[Required]
         [Display(Name = "Numero de Cadeiras Concluidas")]
         public int NumeroCadeirasConcluidas { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Media do Curso")]
         public double Media { get; set; }
 
@@ -47,5 +47,10 @@ namespace PWEB_Estagios.Models
         public string UserId { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
+
+        public Aluno()
+        {
+
+        }
     }
 }

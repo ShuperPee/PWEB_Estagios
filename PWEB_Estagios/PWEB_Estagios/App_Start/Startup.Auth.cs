@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
@@ -45,6 +46,8 @@ namespace PWEB_Estagios
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
+            CreateRolesAndUsers();
+
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
@@ -63,6 +66,47 @@ namespace PWEB_Estagios
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+        }
+        private void CreateRolesAndUsers()
+        {
+            ApplicationDbContext context = new ApplicationDbContext();
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            if (!roleManager.RoleExists("Admin"))
+            {
+                var role = new IdentityRole { Name = "Admin" };
+                roleManager.Create(role);
+
+                var user = new ApplicationUser
+                {
+                    UserName = "admin",
+                    Email = "admin@isec.pt"
+                };
+                string userPWD = @"\12Qwe";
+                var chkUser = UserManager.Create(user, userPWD);
+
+                if (chkUser.Succeeded)
+                {
+                    var result = UserManager.AddToRole(user.Id, "Admin");
+                }
+            }
+            if (!roleManager.RoleExists("Aluno"))
+            {
+                var role = new IdentityRole { Name = "Aluno" };
+                roleManager.Create(role);
+            }
+            if (!roleManager.RoleExists("Empresa"))
+            {
+                var role = new IdentityRole { Name = "Empresa" };
+                roleManager.Create(role);
+            }
+            if (!roleManager.RoleExists("Docente"))
+            {
+                var role = new IdentityRole { Name = "Docente" };
+                roleManager.Create(role);
+            }
         }
     }
 }

@@ -9,17 +9,17 @@ namespace PWEB_Estagios.Models
 {
     public class Docente
     {
-        [Required]
+        //[Required]
         //[Key]
         [Display(Name = "Numero de Docente")]
         public int DocenteId { get; set; }
 
         [Required]
         [MaxLength(100)]
-        [Display(Name = "Primeiro Nome")]
+        //[Display(Name = "Primeiro Nome")]
         public string PrimeiroNome { get; set; }
 
-        [Required]
+        //[Required]
         [MaxLength(100)]
         [Display(Name = "Ultimo Nome")]
         public string Apelido { get; set; }
@@ -35,5 +35,10 @@ namespace PWEB_Estagios.Models
         public string UserId { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
+
+        public Docente()
+        {
+
+        }
     }
 }

@@ -235,6 +235,18 @@
     <Compile Include="Migrations\201812181509502_modelo061.Designer.cs">
       <DependentUpon>201812181509502_modelo061.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812181533024_model06.cs" />
+    <Compile Include="Migrations\201812181533024_model06.Designer.cs">
+      <DependentUpon>201812181533024_model06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181535400_model061.cs" />
+    <Compile Include="Migrations\201812181535400_model061.Designer.cs">
+      <DependentUpon>201812181535400_model061.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181550304_model062.cs" />
+    <Compile Include="Migrations\201812181550304_model062.Designer.cs">
+      <DependentUpon>201812181550304_model062.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -353,6 +365,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812181509502_modelo061.resx">
       <DependentUpon>201812181509502_modelo061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181533024_model06.resx">
+      <DependentUpon>201812181533024_model06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181535400_model061.resx">
+      <DependentUpon>201812181535400_model061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181550304_model062.resx">
+      <DependentUpon>201812181550304_model062.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

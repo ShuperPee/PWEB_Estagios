@@ -372,3 +372,6 @@ C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\o
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo05.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo06.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo061.resources
+C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model06.resources
+C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model061.resources
+C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model062.resources
