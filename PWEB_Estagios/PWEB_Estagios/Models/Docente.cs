@@ -11,7 +11,7 @@ namespace PWEB_Estagios.Models
     {
         //[Required]
         //[Key]
-        [Display(Name = "Numero de Docente")]
+        [Display(Name = "ID BD")]
         public int DocenteId { get; set; }
 
         [Required]
@@ -23,6 +23,9 @@ namespace PWEB_Estagios.Models
         [MaxLength(100)]
         [Display(Name = "Ultimo Nome")]
         public string Apelido { get; set; }
+
+        [Display(Name = "Numero de Docente")]
+        public int NumeroDocente { get; set; }
 
         [Required]
         public string Email { get; set; }

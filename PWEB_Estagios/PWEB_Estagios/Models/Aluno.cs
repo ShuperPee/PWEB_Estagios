@@ -10,9 +10,9 @@ namespace PWEB_Estagios.Models
     [Table ("Alunos")]
     public class Aluno
     {
-        [Required]
+        //[Required]
         //[Key]
-        [Display(Name = "Numero de Aluno")]
+        [Display(Name = "ID BD")]
         public int AlunoId { get; set; }
 
         [Required]
@@ -20,7 +20,7 @@ namespace PWEB_Estagios.Models
         //[Display(Name = "Primeiro Nome")]
         public string PrimeiroNome { get; set; }
 
-        [Required]
+        //[Required]
         [MaxLength(100)]
         [Display(Name = "Ultimo Nome")]
         public string Apelido { get; set; }
@@ -33,8 +33,11 @@ namespace PWEB_Estagios.Models
         public Ramo? Ramo { get; set; }
 
         public IList<CandidaturaProposta> CandidaturaProposta { get; set; }
-        
-        
+
+        [Display(Name = "Numero de Aluno")]
+        public int NumeroAluno { get; set; }
+
+
         //[Required]
         [Display(Name = "Numero de Cadeiras Concluidas")]
         public int NumeroCadeirasConcluidas { get; set; }

@@ -12,7 +12,7 @@ namespace PWEB_Estagios.Models
 
         //[Required]
         //[Key]
-        [Display(Name = "Numero de Empresa")]
+        [Display(Name = "ID BD")]
         public int EmpresaId { get; set; }
 
         [Required]
@@ -27,6 +27,9 @@ namespace PWEB_Estagios.Models
         [MaxLength(100)]
         public string Email { get; set; }
         public IList<Proposta> Propostas { get; set; }
+
+        [Display(Name = "NIF")]
+        public int EmpresaNIF { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string UserId { get; set; }
