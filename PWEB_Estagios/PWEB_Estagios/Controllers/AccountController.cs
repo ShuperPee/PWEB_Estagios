@@ -167,8 +167,11 @@ namespace PWEB_Estagios.Controllers
                     {
                         Aluno aluno = new Aluno()
                         {
-                            PrimeiroNome = model.Email,
-                            UserId = user.Id
+                            Email = model.Email,
+                            UserId = user.Id,
+                            PrimeiroNome = "Pedro",
+                            AlunoId = 1,
+                            NumeroAluno = 1
                         };
                         context.Alunos.Add(aluno);
                    
@@ -177,7 +180,7 @@ namespace PWEB_Estagios.Controllers
                     {
                         Docente docente = new Docente()
                         {
-                            PrimeiroNome = model.Email,
+                            Email = model.Email,
                             UserId = user.Id
                         };
                         context.Docentes.Add(docente);
@@ -186,7 +189,7 @@ namespace PWEB_Estagios.Controllers
                     {
                         Empresa empresa = new Empresa()
                         {
-                            Nome = model.Email,
+                            Email = model.Email,
                             UserId = user.Id
                         };
                         context.Empresas.Add(empresa);
@@ -203,6 +206,7 @@ namespace PWEB_Estagios.Controllers
                 }
                 AddErrors(result);
             }
+            ViewBag.Perfis = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name", "Name");
 
             // If we got this far, something failed, redisplay form
             return View(model);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PWEB_Estagios.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace PWEB_Estagios.Controllers
 {
     public class AlunoController : Controller
     {
+
+        private PropostasContext context = new PropostasContext();
         // GET: Aluno
         [Authorize(Roles = "Aluno")]
         public ActionResult Index()
@@ -15,12 +18,9 @@ namespace PWEB_Estagios.Controllers
             return View();
         }
         [Authorize(Roles = "Aluno")]
-        [Authorize(Roles = "Docente")]
-        [Authorize(Roles = "Empresa")]
         public ActionResult Perfil()
         {
-
-            return View();
+            return View(context.Alunos.Find(1));
         }
         public ActionResult Edit()
         {
