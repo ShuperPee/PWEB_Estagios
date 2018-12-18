@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -29,5 +30,10 @@ namespace PWEB_Estagios.Models
         public Boolean Comisao { get; set; } = false;
         
         public int NumeroMaxCandidaturas { get; set; } = 0;
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

@@ -195,6 +195,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlunoController.cs" />
+    <Compile Include="Controllers\DocenteController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +222,18 @@
     <Compile Include="Migrations\201812131704532_model04.cs" />
     <Compile Include="Migrations\201812131704532_model04.Designer.cs">
       <DependentUpon>201812131704532_model04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181451344_modelo05.cs" />
+    <Compile Include="Migrations\201812181451344_modelo05.Designer.cs">
+      <DependentUpon>201812181451344_modelo05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181456122_modelo06.cs" />
+    <Compile Include="Migrations\201812181456122_modelo06.Designer.cs">
+      <DependentUpon>201812181456122_modelo06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181509502_modelo061.cs" />
+    <Compile Include="Migrations\201812181509502_modelo061.Designer.cs">
+      <DependentUpon>201812181509502_modelo061.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -297,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Aluno\" />
+    <Folder Include="Views\Docente\" />
+    <Folder Include="Views\Empresa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -326,6 +344,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812131704532_model04.resx">
       <DependentUpon>201812131704532_model04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181451344_modelo05.resx">
+      <DependentUpon>201812181451344_modelo05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181456122_modelo06.resx">
+      <DependentUpon>201812181456122_modelo06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181509502_modelo061.resx">
+      <DependentUpon>201812181509502_modelo061.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

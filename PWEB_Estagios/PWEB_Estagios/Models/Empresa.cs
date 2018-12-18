@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -24,5 +25,10 @@ namespace PWEB_Estagios.Models
         [MaxLength(100)]
         public string Email { get; set; }
         public IList<Proposta> Propostas { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

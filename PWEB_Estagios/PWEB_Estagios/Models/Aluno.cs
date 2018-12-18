@@ -42,5 +42,10 @@ namespace PWEB_Estagios.Models
         [Required]
         [Display(Name = "Media do Curso")]
         public double Media { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

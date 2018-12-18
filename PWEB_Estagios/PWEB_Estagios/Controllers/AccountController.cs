@@ -17,9 +17,11 @@ namespace PWEB_Estagios.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private PropostasContext context;
 
         public AccountController()
         {
+            context = new PropostasContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -139,6 +141,7 @@ namespace PWEB_Estagios.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Perfis = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name", "Name");
             return View();
         }
 
@@ -155,14 +158,46 @@ namespace PWEB_Estagios.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await UserManager.AddToRoleAsync(user.Id, model.UserRoles);
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
+                    if (model.UserRoles == "Aluno")
+                    {
+                        Aluno aluno = new Aluno()
+                        {
+                            PrimeiroNome = model.Email,
+                            UserId = user.Id
+                        };
+                        context.Alunos.Add(aluno);
+                   
+                    }
+                    if(model.UserRoles == "Docente")
+                    {
+                        Docente docente = new Docente()
+                        {
+                            PrimeiroNome = model.Email,
+                            UserId = user.Id
+                        };
+                        context.Docentes.Add(docente);
+                    }
+                    if(model.UserRoles == "Empresa")
+                    {
+                        Empresa empresa = new Empresa()
+                        {
+                            Nome = model.Email,
+                            UserId = user.Id
+                        };
+                        context.Empresas.Add(empresa);
+                    }
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
+                    context.SaveChanges();
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
