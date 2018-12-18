@@ -22,6 +22,10 @@ namespace PWEB_Estagios.Controllers
 
             return View();
         }
+        public ActionResult Edit()
+        {
+            return View();
+        }
 
     }
 }

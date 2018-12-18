@@ -1,0 +1,66 @@
+﻿@model PWEB_Estagios.Models.Aluno
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+<h2>Perfil</h2>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimeiroNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimeiroNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apelido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCadeirasConcluidas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCadeirasConcluidas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Media)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Media)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlunoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
