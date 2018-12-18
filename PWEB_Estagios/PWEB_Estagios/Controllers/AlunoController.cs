@@ -14,5 +14,14 @@ namespace PWEB_Estagios.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "Aluno")]
+        [Authorize(Roles = "Docente")]
+        [Authorize(Roles = "Empresa")]
+        public ActionResult Perfil()
+        {
+
+            return View();
+        }
+
     }
 }
