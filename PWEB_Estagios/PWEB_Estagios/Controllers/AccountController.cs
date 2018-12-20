@@ -181,7 +181,12 @@ namespace PWEB_Estagios.Controllers
                         Docente docente = new Docente()
                         {
                             Email = model.Email,
-                            UserId = user.Id
+                            UserId = user.Id,
+                            PrimeiroNome = "Pedro",
+                            Comisao = false,
+                            NumeroMaxCandidaturas = 1,
+                            NumeroDocente = 1
+
                         };
                         context.Docentes.Add(docente);
                     }
@@ -190,7 +195,9 @@ namespace PWEB_Estagios.Controllers
                         Empresa empresa = new Empresa()
                         {
                             Email = model.Email,
-                            UserId = user.Id
+                            UserId = user.Id,
+                            Nome = "p",
+                            EmpresaNIF = 1
                         };
                         context.Empresas.Add(empresa);
                     }
