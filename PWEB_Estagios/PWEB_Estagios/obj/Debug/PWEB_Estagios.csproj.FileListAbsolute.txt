@@ -385,3 +385,4 @@ C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\De
 C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model07.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model09.resources
 C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model09.resources
+C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model10.resources

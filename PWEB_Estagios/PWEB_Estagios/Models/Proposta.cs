@@ -60,6 +60,13 @@ namespace PWEB_Estagios.Models
         [Required]
         [DisplayFormat (DataFormatString = "(yyyy)",ApplyFormatInEditMode = true)]
         public DateTime AnoLetivo { get; set; }
+
+        [Required]
+        [Display(Name = "Seleciona Docente")]
+        public string DocentesSelect { get; set; }
+        [Required]
+        [Display(Name = "Seleciona Empresa")]
+        public string EmpresasSelect { get; set; }
     }
     
 }
