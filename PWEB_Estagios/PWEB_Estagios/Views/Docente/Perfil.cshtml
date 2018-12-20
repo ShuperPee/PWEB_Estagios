@@ -1,4 +1,4 @@
-﻿@model PWEB_Estagios.Models.Aluno
+﻿@model PWEB_Estagios.Models.Docente
 
 @{
     ViewBag.Title = "Perfil";
@@ -7,7 +7,7 @@
 <h2>Perfil</h2>
 
 <div>
-    <h4>Aluno</h4>
+    <h4>Docente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -27,6 +27,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.NumeroDocente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDocente)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
 
@@ -35,27 +43,24 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NumeroCadeirasConcluidas)
+            @Html.DisplayNameFor(model => model.Comisao)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NumeroCadeirasConcluidas)
+            @Html.DisplayFor(model => model.Comisao)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Media)
+            @Html.DisplayNameFor(model => model.NumeroMaxCandidaturas)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Media)
+            @Html.DisplayFor(model => model.NumeroMaxCandidaturas)
         </dd>
-
 
     </dl>
 </div>
-
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AlunoId }) |
+    @Html.ActionLink("Edit", "Edit") |
     @Html.ActionLink("Back to List", "Index")
 </p>
-

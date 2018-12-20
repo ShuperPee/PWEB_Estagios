@@ -21,25 +21,14 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Aluno")]
         public ActionResult Perfil()
         {
-            return View(context.Alunos.Find(1));
+            string strCurrentUserId = User.Identity.GetUserId();
+            return View(context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
         }
+        [Authorize(Roles = "Aluno")]
         public ActionResult Edit()
         {
             string strCurrentUserId = User.Identity.GetUserId();
-
-           // return View(strCurrentUserId);
-
             return View(context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
-        }
-        public ActionResult Avout()
-        {
-            string strCurrentUserId = User.Identity.GetUserId();
-
-            ViewBag.Message = strCurrentUserId;
-
-            return View();
-
-            //return View(context.Alunos.Where(s => s.UserId == strCurrentUserId));
         }
 
     }
