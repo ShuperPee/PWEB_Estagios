@@ -81,7 +81,7 @@ namespace PWEB_Estagios
 
                 var user = new ApplicationUser
                 {
-                    UserName = "admin",
+                    UserName = "admin@isec.pt",
                     Email = "admin@isec.pt"
                 };
                 string userPWD = @"\12Qwe";
