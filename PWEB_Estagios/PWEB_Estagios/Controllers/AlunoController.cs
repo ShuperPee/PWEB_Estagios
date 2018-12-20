@@ -1,4 +1,5 @@
-﻿using PWEB_Estagios.Models;
+﻿using Microsoft.AspNet.Identity;
+using PWEB_Estagios.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,21 @@ namespace PWEB_Estagios.Controllers
         }
         public ActionResult Edit()
         {
+            string strCurrentUserId = User.Identity.GetUserId();
+
+           // return View(strCurrentUserId);
+
+            return View(context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
+        }
+        public ActionResult Avout()
+        {
+            string strCurrentUserId = User.Identity.GetUserId();
+
+            ViewBag.Message = strCurrentUserId;
+
             return View();
+
+            //return View(context.Alunos.Where(s => s.UserId == strCurrentUserId));
         }
 
     }
