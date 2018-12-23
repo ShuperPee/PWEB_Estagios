@@ -62,7 +62,7 @@ namespace PWEB_Estagios.Models
         public DateTime AnoLetivo { get; set; }
 
         [Required]
-        [Display(Name = "Seleciona Docente")]
+        [Display(Name = "Seleciona Docente Responsável")]
         public string DocentesSelect { get; set; }
         [Required]
         [Display(Name = "Seleciona Empresa")]

@@ -28,7 +28,12 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Aluno")]
         public ActionResult Edit()
         {
+            IList<String> ramos = new List<String>();
             string strCurrentUserId = User.Identity.GetUserId();
+            ramos.Add(Ramo.DA.ToString());
+            ramos.Add(Ramo.RAD.ToString());
+            ramos.Add(Ramo.SI.ToString());
+            ViewBag.Ramos = new SelectList(ramos.ToList());
             return View(context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
         }
         [HttpPost]
@@ -45,6 +50,7 @@ namespace PWEB_Estagios.Controllers
                 contaAluno.NumeroAluno = aluno.NumeroAluno;
                 contaAluno.NumeroCadeirasConcluidas = aluno.NumeroCadeirasConcluidas;
                 contaAluno.Media = aluno.Media;
+                contaAluno.Ramo = aluno.Ramo;
             if (ModelState.IsValid)
             {
                     var contaToUpdate = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
