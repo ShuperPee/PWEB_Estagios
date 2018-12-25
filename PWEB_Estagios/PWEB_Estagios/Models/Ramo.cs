@@ -9,6 +9,7 @@ namespace PWEB_Estagios.Models
     {
         DA = 1,
         RAD = 2,
-        SI = 3
+        SI = 3,
+        COMUM = 4
     }
 }

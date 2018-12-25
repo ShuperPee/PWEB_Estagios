@@ -17,7 +17,7 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Aluno")]
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
         [Authorize(Roles = "Aluno")]
         public ActionResult Perfil()
@@ -33,6 +33,7 @@ namespace PWEB_Estagios.Controllers
             ramos.Add(Ramo.DA.ToString());
             ramos.Add(Ramo.RAD.ToString());
             ramos.Add(Ramo.SI.ToString());
+            ramos.Add(Ramo.COMUM.ToString());
             ViewBag.Ramos = new SelectList(ramos.ToList());
             return View(context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
         }

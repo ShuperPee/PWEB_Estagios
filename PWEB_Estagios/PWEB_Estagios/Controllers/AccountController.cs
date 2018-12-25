@@ -169,7 +169,7 @@ namespace PWEB_Estagios.Controllers
                         {
                             Email = model.Email,
                             UserId = user.Id,
-                            PrimeiroNome = "Pedro",
+                            PrimeiroNome = "Default-Aluno",
                             AlunoId = 1,
                             NumeroAluno = 1
                         };
@@ -182,7 +182,7 @@ namespace PWEB_Estagios.Controllers
                         {
                             Email = model.Email,
                             UserId = user.Id,
-                            PrimeiroNome = "Pedro",
+                            PrimeiroNome = "Default-Docente",
                             Comisao = false,
                             NumeroMaxCandidaturas = 1,
                             NumeroDocente = 1
@@ -196,7 +196,7 @@ namespace PWEB_Estagios.Controllers
                         {
                             Email = model.Email,
                             UserId = user.Id,
-                            Nome = "p",
+                            Nome = "Default-Empresa",
                             EmpresaNIF = 1
                         };
                         context.Empresas.Add(empresa);
@@ -209,7 +209,7 @@ namespace PWEB_Estagios.Controllers
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
                     context.SaveChanges();
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Edit", model.UserRoles);
                 }
                 AddErrors(result);
             }

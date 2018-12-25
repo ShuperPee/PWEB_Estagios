@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PWEB_Estagios.Models.Proposta>
+
+@{
+    ViewBag.Title = "Ver";
+}
+
+<h2>Visualizar Propostas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Empresa.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Docente.PrimeiroNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aprovado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCadeirasMinimas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnoLetivo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empresa.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Docente.PrimeiroNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aprovado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCadeirasMinimas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnoLetivo)
+        </td>
+    </tr>
+}
+
+</table>

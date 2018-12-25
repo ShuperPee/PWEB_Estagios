@@ -16,7 +16,7 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Docente")]
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [Authorize(Roles = "Docente")]
@@ -31,6 +31,39 @@ namespace PWEB_Estagios.Controllers
         {
             string strCurrentUserId = User.Identity.GetUserId();
             return View(context.Docentes.Where(s => s.UserId == strCurrentUserId).FirstOrDefault());
+        }
+        [HttpPost]
+        [Authorize(Roles = "Docente")]
+        public ActionResult Edit(Docente docente)
+        {
+            if(docente != null)
+            {
+
+                string strCurrentUserId = User.Identity.GetUserId();
+                Docente contaDocente = context.Docentes.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+                contaDocente.PrimeiroNome = docente.PrimeiroNome;
+                contaDocente.Apelido = docente.Apelido;
+                contaDocente.NumeroDocente = docente.NumeroDocente;
+                if (ModelState.IsValid)
+                {
+                    
+                    var contaToUpdate = context.Docentes.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+                    if (TryUpdateModel(contaToUpdate, "", new string[] { "PrimeiroNome", "Apelido", "NumeroDocente"}))
+                    {
+                        try
+                        {
+                            context.SaveChanges();
+                            return RedirectToAction("Perfil");
+                        }
+                        catch (Exception)
+                        {
+                            ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
+                        }
+                    }
+                    return RedirectToAction("Perfil");
+                }
+            }
+            return View(docente);
         }
     }
 }

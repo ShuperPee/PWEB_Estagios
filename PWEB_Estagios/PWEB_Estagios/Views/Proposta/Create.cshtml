@@ -17,7 +17,7 @@
         <div class="form-group">
             @Html.LabelFor(m => m.EmpresasSelect, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.DropDownList("EmpresaSelect", (SelectList)ViewBag.Empresas, "Selecione Empresa", new { @class = "form-control" })
+                @Html.DropDownList("EmpresasSelect", (SelectList)ViewBag.Empresas, "Selecione Empresa", new { @class = "form-control" })
             </div>
         </div>
 
@@ -69,14 +69,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NumeroCadeirasMinimas, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NumeroCadeirasMinimas, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.AnoLetivo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AnoLetivo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AnoLetivo, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">

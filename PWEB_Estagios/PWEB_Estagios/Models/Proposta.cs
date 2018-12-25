@@ -15,7 +15,7 @@ namespace PWEB_Estagios.Models
     [Table("Propostas")]
     public class Proposta
     {
-        [Required]
+        //[Required]
         //[Key]
         public int PropostaId { get; set; }
 
@@ -35,36 +35,36 @@ namespace PWEB_Estagios.Models
 
         public Boolean Aprovado { get; set; } = false;
 
-        [Required]
+       // [Required]
         [MaxLength(500)]
         public string Descricao { get; set; }
 
-        [Required]
+       // [Required]
         public TipoProposta Tipo { get; set; }
 
-        [Required]
+        //[Required]
         [MaxLength(100)]
         public string Local { get; set; }
 
-        [Required]
+        //[Required]
         public Ramo? Ramos { get; set; }
 
-        [Required]
+       // [Required]
         [Range(0,20)]
         public double MediaMin { get; set; }
     
-        [Required]
+        //[Required]
         [Range(0,30)]
         public int NumeroCadeirasMinimas { get; set; }
 
-        [Required]
-        [DisplayFormat (DataFormatString = "(yyyy)",ApplyFormatInEditMode = true)]
+        //[Required]
+        //[DisplayFormat (DataFormatString = "(yyyy)",ApplyFormatInEditMode = true)]
         public DateTime AnoLetivo { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Seleciona Docente Responsável")]
         public string DocentesSelect { get; set; }
-        [Required]
+        //[Required]
         [Display(Name = "Seleciona Empresa")]
         public string EmpresasSelect { get; set; }
     }

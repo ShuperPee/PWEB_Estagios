@@ -30,7 +30,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Visualizar Perfil", "Perfil", "Aluno")</li>
-                                <li>@Html.ActionLink("Editar Perfil", "", "")</li>
+                                <li>@Html.ActionLink("Editar Perfil", "Edit", "Aluno")</li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -60,6 +60,26 @@
                     {
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">
+                                Perfil
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Visualizar Perfil", "Perfil", "Docente")</li>
+                                <li>@Html.ActionLink("Editar Perfil", "Edit", "Docente")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                Propostas
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Criar Proposta", "Create", "Proposta")</li>
+                                <li>@Html.ActionLink("Ver Propostas", "Ver", "Proposta")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
                                 Caixa de Entrada
                                 <span class="caret"></span>
                             </a>
@@ -71,6 +91,26 @@
                     }
                     @if (User.IsInRole("Empresa"))
                     {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                Perfil
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Visualizar Perfil", "Perfil", "Empresa")</li>
+                                <li>@Html.ActionLink("Editar Perfil", "Edit", "Empresa")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                Propostas
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Criar Proposta", "Create", "Proposta")</li>
+                                <li>@Html.ActionLink("Ver Propostas", "Ver", "Proposta")</li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">
                                 Caixa de Entrada
