@@ -21,6 +21,9 @@
             @Html.DisplayNameFor(model => model.Aprovado)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Ramos)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
         <th>
@@ -50,6 +53,9 @@
             @Html.DisplayFor(modelItem => item.Aprovado)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Ramos)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Descricao)
         </td>
         <td>
@@ -62,7 +68,7 @@
             @Html.DisplayFor(modelItem => item.NumeroCadeirasMinimas)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AnoLetivo)
+            @Html.DisplayFor(modelItem => item.AnoLetivo.Year)
         </td>
     </tr>
 }

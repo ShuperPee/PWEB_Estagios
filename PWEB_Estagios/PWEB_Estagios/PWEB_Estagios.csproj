@@ -276,6 +276,10 @@
     <Compile Include="Migrations\201812241717010_model14.Designer.cs">
       <DependentUpon>201812241717010_model14.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812261716380_model15.cs" />
+    <Compile Include="Migrations\201812261716380_model15.Designer.cs">
+      <DependentUpon>201812261716380_model15.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -356,6 +360,7 @@
     <Content Include="Views\Empresa\Perfil.cshtml" />
     <Content Include="Views\Empresa\Edit.cshtml" />
     <Content Include="Views\Proposta\Ver.cshtml" />
+    <Content Include="Views\Proposta\Candidatura.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -428,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812241717010_model14.resx">
       <DependentUpon>201812241717010_model14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812261716380_model15.resx">
+      <DependentUpon>201812261716380_model15.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

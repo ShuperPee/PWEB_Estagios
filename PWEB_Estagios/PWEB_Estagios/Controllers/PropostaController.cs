@@ -1,4 +1,5 @@
-﻿using PWEB_Estagios.Models;
+﻿using Microsoft.AspNet.Identity;
+using PWEB_Estagios.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -20,6 +21,26 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Docente, Empresa, Aluno")]
         public ActionResult Ver()
         {
+            
+            //foreach(Proposta i in context.Propostas)
+            //{
+            //    Docente docente= context.Docentes.Where(x => x.DocenteId == i.DocenteId).FirstOrDefault();
+            //    i.Docente = docente;
+            //    i.Empresa = context.Empresas.Where(x => x.EmpresaId == i.EmpresaId).FirstOrDefault();
+            //    var propostaToUpdate = context.Propostas.Where(x => x.PropostaId == i.PropostaId).FirstOrDefault();
+            //    if (TryUpdateModel(propostaToUpdate, "", new String[] { "Docente", "Empresa" })){
+            //        try
+            //        {
+            //            context.SaveChanges();
+            //            return RedirectToAction("Perfil");
+            //        }
+            //        catch (Exception)
+            //        {
+            //            ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
+            //        }
+            //    }
+            //}
+            //context.SaveChanges();
             return View(context.Propostas.ToList());
         }
         // GET: Proposta Create
@@ -109,5 +130,63 @@ namespace PWEB_Estagios.Controllers
                 }
                 return RedirectToAction("Create", "Proposta");
             }
+
+        [Authorize(Roles = "Aluno")]
+        public ActionResult Candidatura()
+        {
+            IList<String> propostas = new List<String>();
+            foreach(var i in context.Propostas)
+            {
+                propostas.Add(i.PropostaId.ToString());
+            }
+            ViewBag.Propostas = new SelectList(propostas.ToList());
+            return View();
         }
+        [HttpPost]
+        [Authorize(Roles = "Aluno")]
+        public ActionResult Candidatura(CandidaturaProposta candidatura)
+        {
+            if (ModelState.IsValid)
+            {
+                if (candidatura != null)
+                {
+                    int propostaId = Convert.ToInt32(candidatura.PropostasSelect);
+                    string strCurrentUserId = User.Identity.GetUserId();
+                    Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+                    CandidaturaProposta newCandidatura = new CandidaturaProposta()  
+                    {
+                        CandidaturaPropostaId = 1,
+                        Aluno = contaAluno,
+                        AlunoId = contaAluno.AlunoId,
+                        Aprovado = false,
+                        PropostaId = propostaId,
+                        Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
+                    };
+                    //contaAluno.CandidaturaProposta.Add(candidatura);
+                    context.Candidaturas.Add(newCandidatura);
+                    try
+                    {
+                        context.SaveChanges();
+                    }
+                    catch (DbEntityValidationException e)
+                    {
+                        //Create empty list to capture Validation error(s)
+                        var outputLines = new List<string>();
+
+                        foreach (var eve in e.EntityValidationErrors)
+                        {
+                            outputLines.Add(
+                                $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
+                            outputLines.AddRange(eve.ValidationErrors.Select(ve =>
+                                $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
+                        }
+                        Console.Write(outputLines);
+                    }
+                    return RedirectToAction("Ver", "Proposta");
+                }
+            }
+
+            return RedirectToAction("Candidatura", "Proposta");
+        }
+    }
     }
