@@ -13,7 +13,7 @@ namespace PWEB_Estagios.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
         [Authorize(Roles = "Admin")]
         public ActionResult ListarDocentes()

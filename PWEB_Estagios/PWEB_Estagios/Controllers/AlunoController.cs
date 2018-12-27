@@ -52,23 +52,23 @@ namespace PWEB_Estagios.Controllers
                 contaAluno.NumeroCadeirasConcluidas = aluno.NumeroCadeirasConcluidas;
                 contaAluno.Media = aluno.Media;
                 contaAluno.Ramo = aluno.Ramo;
-            if (ModelState.IsValid)
-            {
-                    var contaToUpdate = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
-                    if(TryUpdateModel(contaToUpdate,"",new string[] {"PrimeiroNome", "Apelido", "NumeroAluno","NumeroCadeirasConcluidas", "Media" }))
-                    {
-                        try
+                if (ModelState.IsValid)
+                {
+                        var contaToUpdate = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+                        if(TryUpdateModel(contaToUpdate,"",new string[] {"PrimeiroNome", "Apelido", "NumeroAluno","NumeroCadeirasConcluidas", "Media" }))
                         {
-                            context.SaveChanges();
-                            return RedirectToAction("Perfil");
+                            try
+                            {
+                                context.SaveChanges();
+                                return RedirectToAction("Perfil");
+                            }
+                            catch (Exception)
+                            {
+                                ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
+                            }
                         }
-                        catch (Exception)
-                        {
-                            ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
-                        }
-                    }
-                return RedirectToAction("Perfil");
-            }
+                    return RedirectToAction("Perfil");
+                }
 
             }
             return View(aluno);

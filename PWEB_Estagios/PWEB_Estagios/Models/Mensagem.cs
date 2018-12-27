@@ -21,8 +21,9 @@ namespace PWEB_Estagios.Models
         //[Required]
         public Aluno Aluno { get; set; }
 
-        //[Required]
-        public IList<Docente> Docentes { get; set; }
+        public int DocentId { get; set; }
+
+        public Docente Docente { get; set; }
 
         //[Required]
         public string Texto { get; set; }

@@ -201,6 +201,7 @@
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MensagemController.cs" />
     <Compile Include="Controllers\PropostaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -293,6 +294,14 @@
     <Compile Include="Migrations\201812270255297_model18.Designer.cs">
       <DependentUpon>201812270255297_model18.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812272253585_model19.cs" />
+    <Compile Include="Migrations\201812272253585_model19.Designer.cs">
+      <DependentUpon>201812272253585_model19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812272258591_model191.cs" />
+    <Compile Include="Migrations\201812272258591_model191.Designer.cs">
+      <DependentUpon>201812272258591_model191.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -377,6 +386,7 @@
     <Content Include="Views\Admin\ListarDocentes.cshtml" />
     <Content Include="Views\Proposta\VerComissao.cshtml" />
     <Content Include="Views\Admin\VisualizarDocentes.cshtml" />
+    <Content Include="Views\Mensagem\EscreverMensagem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -461,6 +471,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812270255297_model18.resx">
       <DependentUpon>201812270255297_model18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812272253585_model19.resx">
+      <DependentUpon>201812272253585_model19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812272258591_model191.resx">
+      <DependentUpon>201812272258591_model191.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

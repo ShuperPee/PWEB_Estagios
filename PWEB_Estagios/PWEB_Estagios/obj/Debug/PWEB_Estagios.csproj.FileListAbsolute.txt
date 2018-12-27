@@ -537,3 +537,5 @@ C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagio
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.CopyComplete
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.dll
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.pdb
+C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model19.resources
+C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model191.resources
