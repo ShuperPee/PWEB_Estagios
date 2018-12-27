@@ -27,8 +27,5 @@ namespace PWEB_Estagios.Models
         public Aluno Aluno { get; set; }
 
         public Boolean Aprovado { get; set; } = false;
-
-        [Display(Name = "Seleciona Proposta")]
-        public string PropostasSelect { get; set; }
     }
 }

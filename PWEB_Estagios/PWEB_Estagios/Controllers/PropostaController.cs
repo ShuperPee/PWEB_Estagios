@@ -21,27 +21,59 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Docente, Empresa, Aluno")]
         public ActionResult Ver()
         {
-            
-            //foreach(Proposta i in context.Propostas)
+            //IList<String> listaDocentes = new List<String>();
+            //IList<String> listaEmpresas = new List<String>();
+            //foreach (Proposta i in context.Propostas)
             //{
-            //    Docente docente= context.Docentes.Where(x => x.DocenteId == i.DocenteId).FirstOrDefault();
-            //    i.Docente = docente;
-            //    i.Empresa = context.Empresas.Where(x => x.EmpresaId == i.EmpresaId).FirstOrDefault();
-            //    var propostaToUpdate = context.Propostas.Where(x => x.PropostaId == i.PropostaId).FirstOrDefault();
-            //    if (TryUpdateModel(propostaToUpdate, "", new String[] { "Docente", "Empresa" })){
-            //        try
-            //        {
-            //            context.SaveChanges();
-            //            return RedirectToAction("Perfil");
-            //        }
-            //        catch (Exception)
-            //        {
-            //            ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
-            //        }
-            //    }
+            //    Docente x;
+            //    int w = i.DocenteId;
+            //    x = context.Docentes.Where(s => s.DocenteId == w).FirstOrDefault();
+            //    listaDocentes.Add(x.PrimeiroNome);
+            //    Empresa y = new Empresa();
+            //    y = context.Empresas.Where(s => s.EmpresaId == i.EmpresaId).FirstOrDefault();
+            //    listaEmpresas.Add(y.Nome);
+            //    //listaDocentes.Add(context.Docentes.Where(x => x.DocenteId == i.DocenteId).FirstOrDefault().PrimeiroNome);
+            //    //listaEmpresas.Add(context.Empresas.Where(x => x.EmpresaId == i.EmpresaId).FirstOrDefault().Nome);
             //}
-            //context.SaveChanges();
-            return View(context.Propostas.ToList());
+            //ViewBag.listaDocentes = new SelectList(listaDocentes.ToList());
+            //ViewBag.listaEmpresas = new SelectList(listaEmpresas.ToList());
+            //Docente doc = context.Propostas.FirstOrDefault().Docente;
+            if (User.IsInRole("Docente"))
+            {
+                string strCurrentUserId = User.Identity.GetUserId();
+                Docente contaDocente = context.Docentes.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+                if (contaDocente.Comisao == true)
+                {
+                    return RedirectToAction("VerComissao", "Proposta");
+                }
+            }
+            IList<Proposta> listaPropostas = new List<Proposta>();
+            foreach(Proposta i in context.Propostas)
+            {
+                if (i.Aprovado)
+                {
+                    listaPropostas.Add(i);
+                }
+            }
+            foreach(Proposta i in listaPropostas)
+            {
+                i.Docente = context.Docentes.Where(s => s.DocenteId == i.DocenteId).FirstOrDefault();
+                i.Empresa = context.Empresas.Where(s => s.EmpresaId == i.EmpresaId).FirstOrDefault();
+            }
+
+            return View(listaPropostas);
+        }
+        [Authorize(Roles = "Docente")]
+        public ActionResult VerComissao()
+        {
+            return View(context.Propostas);
+        }
+        public ActionResult AprovarProposta(int propostaId)
+        {
+            Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
+            proposta.Aprovado = true;
+            context.SaveChanges();
+            return RedirectToAction("Ver", "Proposta");
         }
         // GET: Proposta Create
         [Authorize(Roles = "Docente, Empresa")]
@@ -91,9 +123,9 @@ namespace PWEB_Estagios.Controllers
                     Proposta newProposta = new Proposta()
                     {
                         PropostaId = 1,
-                        Docente = context.Docentes.Where(x => x.NumeroDocente == docId).FirstOrDefault(),
+                        Docente = context.Docentes.Where(x => x.NumeroDocente == docNum).First(),
                         DocenteId = docId,
-                        Empresa = context.Empresas.Where(x => x.EmpresaNIF == empreId).FirstOrDefault(),
+                        Empresa = context.Empresas.Where(x => x.EmpresaNIF == empreNif).First(),
                         EmpresaId = empreId,
                         Descricao = proposta.Descricao,
                         Tipo = proposta.Tipo,
@@ -134,23 +166,11 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Aluno")]
         public ActionResult Candidatura()
         {
-            IList<String> propostas = new List<String>();
-            foreach(var i in context.Propostas)
-            {
-                propostas.Add(i.PropostaId.ToString());
-            }
-            ViewBag.Propostas = new SelectList(propostas.ToList());
-            return View();
+            return View(context.Propostas);
         }
-        [HttpPost]
-        [Authorize(Roles = "Aluno")]
-        public ActionResult Candidatura(CandidaturaProposta candidatura)
+
+        public ActionResult FazerCandidatura(int propostaId)
         {
-            if (ModelState.IsValid)
-            {
-                if (candidatura != null)
-                {
-                    int propostaId = Convert.ToInt32(candidatura.PropostasSelect);
                     string strCurrentUserId = User.Identity.GetUserId();
                     Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
                     CandidaturaProposta newCandidatura = new CandidaturaProposta()  
@@ -162,7 +182,7 @@ namespace PWEB_Estagios.Controllers
                         PropostaId = propostaId,
                         Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
                     };
-                    //contaAluno.CandidaturaProposta.Add(candidatura);
+                    //contaAluno.CandidaturaProposta.Add(newCandidatura);
                     context.Candidaturas.Add(newCandidatura);
                     try
                     {
@@ -183,10 +203,6 @@ namespace PWEB_Estagios.Controllers
                         Console.Write(outputLines);
                     }
                     return RedirectToAction("Ver", "Proposta");
-                }
-            }
-
-            return RedirectToAction("Candidatura", "Proposta");
         }
     }
     }

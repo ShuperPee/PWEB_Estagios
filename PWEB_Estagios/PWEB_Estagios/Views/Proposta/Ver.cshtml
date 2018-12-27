@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PWEB_Estagios.Models.Proposta>
 
 @{
-    ViewBag.Title = "Ver";
+    ViewBag.Title = "Ver2";
 }
 
-<h2>Visualizar Propostas</h2>
+<h2>Ver</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -16,12 +16,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Docente.PrimeiroNome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Aprovado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ramos)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Descricao)
@@ -50,12 +44,6 @@
             @Html.DisplayFor(modelItem => item.Docente.PrimeiroNome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Aprovado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ramos)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Descricao)
         </td>
         <td>
@@ -68,7 +56,7 @@
             @Html.DisplayFor(modelItem => item.NumeroCadeirasMinimas)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AnoLetivo.Year)
+            @Html.DisplayFor(modelItem => item.AnoLetivo)
         </td>
     </tr>
 }

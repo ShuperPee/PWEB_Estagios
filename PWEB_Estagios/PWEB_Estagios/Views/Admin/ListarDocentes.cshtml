@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PWEB_Estagios.Models.Docente>
+
+@{
+    ViewBag.Title = "ListarDocentes";
+}
+
+<h2>ListarDocentes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimeiroNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDocente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comisao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroMaxCandidaturas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimeiroNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apelido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDocente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comisao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.ActionLink("<Adicionar a Comissão>", "AddComissao", new { docenteId = item.DocenteId })
+        </td>
+        <td>
+            @Html.ActionLink("<Remover da Comissão>", "RemoveComissao", new { docenteId = item.DocenteId })
+        </td>
+    </tr>
+}
+
+</table>

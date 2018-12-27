@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using PWEB_Estagios.Models;
+using System.Collections.Generic;
 
 namespace PWEB_Estagios.Controllers
 {
@@ -171,8 +172,9 @@ namespace PWEB_Estagios.Controllers
                             UserId = user.Id,
                             PrimeiroNome = "Default-Aluno",
                             AlunoId = 1,
-                            NumeroAluno = 1
-                        };
+                            NumeroAluno = 1,
+                            CandidaturaProposta = new List<CandidaturaProposta>()
+                    };
                         context.Alunos.Add(aluno);
                    
                     }

@@ -16,6 +16,5 @@ namespace PWEB_Estagios.Models
         public DbSet<Proposta> Propostas { get; set; }
         public DbSet<CandidaturaProposta> Candidaturas { get; set; }
         public DbSet<Mensagem> Mensagens { get; set; }
-
     }
 }
