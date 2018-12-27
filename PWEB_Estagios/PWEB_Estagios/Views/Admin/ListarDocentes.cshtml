@@ -6,9 +6,6 @@
 
 <h2>ListarDocentes</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -28,9 +25,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NumeroMaxCandidaturas)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
         </th>
         <th></th>
     </tr>
@@ -53,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.Comisao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UserId)
+            @Html.DisplayFor(modelItem => item.NumeroMaxCandidaturas)
         </td>
         <td>
             @Html.ActionLink("<Adicionar a Comissão>", "AddComissao", new { docenteId = item.DocenteId })

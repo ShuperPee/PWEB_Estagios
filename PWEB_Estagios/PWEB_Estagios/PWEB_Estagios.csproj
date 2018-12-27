@@ -376,6 +376,7 @@
     <Content Include="Views\Proposta\Candidatura.cshtml" />
     <Content Include="Views\Admin\ListarDocentes.cshtml" />
     <Content Include="Views\Proposta\VerComissao.cshtml" />
+    <Content Include="Views\Admin\VisualizarDocentes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

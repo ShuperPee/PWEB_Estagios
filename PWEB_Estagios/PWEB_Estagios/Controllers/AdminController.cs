@@ -20,6 +20,12 @@ namespace PWEB_Estagios.Controllers
         {
             return View(context.Docentes);
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult VisualizarDocentes()
+        {
+            return View(context.Docentes);
+        }
         public ActionResult AddComissao(int docenteId)
         {
             Docente docente = context.Docentes.Where(x => x.DocenteId == docenteId).FirstOrDefault();
