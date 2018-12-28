@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PWEB_Estagios.Models.Proposta>
+
+@{
+    ViewBag.Title = "Candidatura";
+}
+
+<h2>Candidatura</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpresaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocenteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCadeirasMinimas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnoLetivo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpresaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocenteId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Local)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCadeirasMinimas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoLetivo)
+            </td>
+
+            <td>
+                @Html.ActionLink("<Candidatar>", "FazerCandidatura", new { propostaId = item.PropostaId })
+            </td>
+        </tr>
+
+    }
+
+
+</table>
+@Html.Raw(TempData["msg"])

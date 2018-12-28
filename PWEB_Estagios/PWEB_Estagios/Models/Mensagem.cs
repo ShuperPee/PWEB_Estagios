@@ -27,5 +27,12 @@ namespace PWEB_Estagios.Models
 
         //[Required]
         public string Texto { get; set; }
+
+        //[Required]
+        [Display(Name = "Seleciona Docente")]
+        public string DocentesSelect { get; set; }
+        //[Required]
+        [Display(Name = "Selecione Aluno")]
+        public string AlunosSelect { get; set; }
     }
 }

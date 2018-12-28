@@ -39,9 +39,8 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Visualizar Candidaturas", "", "")</li>
-                                <li>@Html.ActionLink("Efetuar Candidatura", "", "")</li>
-                                <li>@Html.ActionLink("Editar Candidatura", "", "")</li>
+                                <li>@Html.ActionLink("Visualizar Candidaturas", "ListarCandidaturas", "Candidatura")</li>
+                                <li>@Html.ActionLink("Efetuar Candidatura", "Candidatura", "Candidatura")</li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -50,8 +49,8 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Ler Mensagem", "", "")</li>
-                                <li>@Html.ActionLink("Enviar Mensagem", "", "")</li>
+                                <li>@Html.ActionLink("Ler Mensagem", "LerMensagem", "Mensagem")</li>
+                                <li>@Html.ActionLink("Enviar Mensagem", "EscreverMensagem", "Mensagem")</li>
                             </ul>
                         </li>
 
@@ -84,8 +83,8 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Ler Mensagem", "", "")</li>
-                                <li>@Html.ActionLink("Enviar Mensagem", "", "")</li>
+                                <li>@Html.ActionLink("Ler Mensagem", "LerMensagem", "Mensagem")</li>
+                                <li>@Html.ActionLink("Enviar Mensagem", "EscreverMensagem", "Mensagem")</li>
                             </ul>
                         </li>
                     }
@@ -111,16 +110,6 @@
                                 <li>@Html.ActionLink("Ver Propostas", "Ver", "Proposta")</li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                Caixa de Entrada
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Ler Mensagem", "", "")</li>
-                                <li>@Html.ActionLink("Enviar Mensagem", "", "")</li>
-                            </ul>
-                        </li>
                     }
                     @if (User.IsInRole("Admin"))
                     {
@@ -132,16 +121,6 @@
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Visualizar Comissao", "VisualizarDocentes", "Admin")</li>
                                 <li>@Html.ActionLink("Editar Comissao", "ListarDocentes", "Admin")</li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                Caixa de Entrada
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Ler Mensagem", "", "")</li>
-                                <li>@Html.ActionLink("Enviar Mensagem", "", "")</li>
                             </ul>
                         </li>
                     }

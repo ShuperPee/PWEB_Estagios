@@ -21,23 +21,6 @@ namespace PWEB_Estagios.Controllers
         [Authorize(Roles = "Docente, Empresa, Aluno")]
         public ActionResult Ver()
         {
-            //IList<String> listaDocentes = new List<String>();
-            //IList<String> listaEmpresas = new List<String>();
-            //foreach (Proposta i in context.Propostas)
-            //{
-            //    Docente x;
-            //    int w = i.DocenteId;
-            //    x = context.Docentes.Where(s => s.DocenteId == w).FirstOrDefault();
-            //    listaDocentes.Add(x.PrimeiroNome);
-            //    Empresa y = new Empresa();
-            //    y = context.Empresas.Where(s => s.EmpresaId == i.EmpresaId).FirstOrDefault();
-            //    listaEmpresas.Add(y.Nome);
-            //    //listaDocentes.Add(context.Docentes.Where(x => x.DocenteId == i.DocenteId).FirstOrDefault().PrimeiroNome);
-            //    //listaEmpresas.Add(context.Empresas.Where(x => x.EmpresaId == i.EmpresaId).FirstOrDefault().Nome);
-            //}
-            //ViewBag.listaDocentes = new SelectList(listaDocentes.ToList());
-            //ViewBag.listaEmpresas = new SelectList(listaEmpresas.ToList());
-            //Docente doc = context.Propostas.FirstOrDefault().Docente;
             if (User.IsInRole("Docente"))
             {
                 string strCurrentUserId = User.Identity.GetUserId();
@@ -171,38 +154,38 @@ namespace PWEB_Estagios.Controllers
 
         public ActionResult FazerCandidatura(int propostaId)
         {
-                    string strCurrentUserId = User.Identity.GetUserId();
-                    Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
-                    CandidaturaProposta newCandidatura = new CandidaturaProposta()  
-                    {
-                        CandidaturaPropostaId = 1,
-                        Aluno = contaAluno,
-                        AlunoId = contaAluno.AlunoId,
-                        Aprovado = false,
-                        PropostaId = propostaId,
-                        Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
-                    };
-                    //contaAluno.CandidaturaProposta.Add(newCandidatura);
-                    context.Candidaturas.Add(newCandidatura);
-                    try
-                    {
-                        context.SaveChanges();
-                    }
-                    catch (DbEntityValidationException e)
-                    {
-                        //Create empty list to capture Validation error(s)
-                        var outputLines = new List<string>();
+            string strCurrentUserId = User.Identity.GetUserId();
+            Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+            CandidaturaProposta newCandidatura = new CandidaturaProposta()  
+            {
+                CandidaturaPropostaId = 1,
+                Aluno = contaAluno,
+                AlunoId = contaAluno.AlunoId,
+                Aprovado = false,
+                PropostaId = propostaId,
+                Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
+            };
+            //contaAluno.CandidaturaProposta.Add(newCandidatura);
+            context.Candidaturas.Add(newCandidatura);
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                //Create empty list to capture Validation error(s)
+                var outputLines = new List<string>();
 
-                        foreach (var eve in e.EntityValidationErrors)
-                        {
-                            outputLines.Add(
-                                $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
-                            outputLines.AddRange(eve.ValidationErrors.Select(ve =>
-                                $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
-                        }
-                        Console.Write(outputLines);
-                    }
-                    return RedirectToAction("Ver", "Proposta");
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    outputLines.Add(
+                        $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
+                    outputLines.AddRange(eve.ValidationErrors.Select(ve =>
+                        $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
+                }
+                Console.Write(outputLines);
+            }
+            return RedirectToAction("Ver", "Proposta");
         }
     }
     }

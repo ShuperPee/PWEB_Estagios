@@ -7,8 +7,8 @@
     <h2>Programação WEB</h2>
     @if (User.Identity.IsAuthenticated)
     {
-        <p><a href="@Url.Action("", "")" class="btn btn-primary btn-lg">Ler Mensagens &raquo;</a></p>
-        <p><a href="@Url.Action("", "")" class="btn btn-primary btn-lg">Escrever Mensagens &raquo;</a></p>
+        <p><a href="@Url.Action("LerMensagem", "Mensagem")" class="btn btn-primary btn-lg">Ler Mensagens &raquo;</a></p>
+        <p><a href="@Url.Action("EscreverMensagem", "Mensagem")" class="btn btn-primary btn-lg">Escrever Mensagens &raquo;</a></p>
     }
     else
     {

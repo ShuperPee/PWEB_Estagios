@@ -197,6 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AlunoController.cs" />
+    <Compile Include="Controllers\CandidaturaController.cs" />
     <Compile Include="Controllers\DocenteController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -302,6 +303,10 @@
     <Compile Include="Migrations\201812272258591_model191.Designer.cs">
       <DependentUpon>201812272258591_model191.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812272345139_model20.cs" />
+    <Compile Include="Migrations\201812272345139_model20.Designer.cs">
+      <DependentUpon>201812272345139_model20.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -382,11 +387,13 @@
     <Content Include="Views\Empresa\Perfil.cshtml" />
     <Content Include="Views\Empresa\Edit.cshtml" />
     <Content Include="Views\Proposta\Ver.cshtml" />
-    <Content Include="Views\Proposta\Candidatura.cshtml" />
+    <Content Include="Views\Candidatura\Candidatura.cshtml" />
     <Content Include="Views\Admin\ListarDocentes.cshtml" />
     <Content Include="Views\Proposta\VerComissao.cshtml" />
     <Content Include="Views\Admin\VisualizarDocentes.cshtml" />
     <Content Include="Views\Mensagem\EscreverMensagem.cshtml" />
+    <Content Include="Views\Mensagem\LerMensagem.cshtml" />
+    <Content Include="Views\Candidatura\ListarCandidaturas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -477,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812272258591_model191.resx">
       <DependentUpon>201812272258591_model191.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812272345139_model20.resx">
+      <DependentUpon>201812272345139_model20.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
