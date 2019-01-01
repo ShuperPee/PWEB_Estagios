@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PWEB_Estagios.Models.CandidaturaProposta>
+
+@{
+    ViewBag.Title = "ListarTodasCandidaturas";
+}
+
+<h2>ListarTodasCandidaturas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PropostaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlunoNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlunoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aprovado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropostaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlunoNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlunoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aprovado)
+        </td>
+        <td>
+            @Html.ActionLink("<Aceitar>", "AprovarCandidatura", new { candidaturaId = item.CandidaturaPropostaId })
+        </td>
+        <td>
+            @Html.ActionLink("<Rejeitar>", "RecusarCandidatura", new { candidaturaId = item.CandidaturaPropostaId })
+        </td>
+    </tr>
+}
+
+</table>

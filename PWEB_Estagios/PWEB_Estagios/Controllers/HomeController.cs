@@ -26,5 +26,17 @@ namespace PWEB_Estagios.Controllers
 
             return View();
         }
+
+        //falta fazer
+        public ActionResult ListaPropostas()
+        {
+            return View();
+        }
+
+        //falta fazer
+        public ActionResult Estatisticas()
+        {
+            return View();
+        }
     }
 }

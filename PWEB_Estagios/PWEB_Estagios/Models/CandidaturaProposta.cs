@@ -24,8 +24,13 @@ namespace PWEB_Estagios.Models
         [ForeignKey("Aluno")]
         public int AlunoId { get; set; }
 
+        public String AlunoNome { get; set; }
+
         public Aluno Aluno { get; set; }
 
         public Boolean Aprovado { get; set; } = false;
+
+        public int NotaProposta { get; set; }
+
     }
 }

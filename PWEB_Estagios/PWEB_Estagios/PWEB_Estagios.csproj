@@ -307,10 +307,19 @@
     <Compile Include="Migrations\201812272345139_model20.Designer.cs">
       <DependentUpon>201812272345139_model20.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901011703456_model21.cs" />
+    <Compile Include="Migrations\201901011703456_model21.Designer.cs">
+      <DependentUpon>201901011703456_model21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901011753395_22.cs" />
+    <Compile Include="Migrations\201901011753395_22.Designer.cs">
+      <DependentUpon>201901011753395_22.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\CandidaturaProposta.cs" />
+    <Compile Include="Models\Estatisticas.cs" />
     <Compile Include="Models\PropostasContext.cs" />
     <Compile Include="Models\Docente.cs" />
     <Compile Include="Models\Empresa.cs" />
@@ -394,6 +403,8 @@
     <Content Include="Views\Mensagem\EscreverMensagem.cshtml" />
     <Content Include="Views\Mensagem\LerMensagem.cshtml" />
     <Content Include="Views\Candidatura\ListarCandidaturas.cshtml" />
+    <Content Include="Views\Proposta\Avaliar.cshtml" />
+    <Content Include="Views\Candidatura\ListarTodasCandidaturas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -487,6 +498,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812272345139_model20.resx">
       <DependentUpon>201812272345139_model20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901011703456_model21.resx">
+      <DependentUpon>201901011703456_model21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901011753395_22.resx">
+      <DependentUpon>201901011753395_22.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

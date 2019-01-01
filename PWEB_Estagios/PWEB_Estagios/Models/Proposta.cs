@@ -23,6 +23,7 @@ namespace PWEB_Estagios.Models
         [ForeignKey("Empresa")]
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
+        public String NomeEmpresa { get; set; }
        
         public IList<Aluno> Alunos { get; set; }
 
@@ -31,11 +32,15 @@ namespace PWEB_Estagios.Models
         public int DocenteId { get; set; }
         public Docente Docente { get; set; }
 
+        public String NomeDocente { get; set; }
+
         public IList<Docente> DocentesAuxiliares { get; set; }
 
         public Boolean Aprovado { get; set; } = false;
 
-       // [Required]
+        public Boolean Ativo { get; set; } = true;
+
+        // [Required]
         [MaxLength(500)]
         public string Descricao { get; set; }
 

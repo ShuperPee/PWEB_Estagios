@@ -41,9 +41,10 @@ namespace PWEB_Estagios.Controllers
             }
             CandidaturaProposta newCandidatura = new CandidaturaProposta()
             {
-                CandidaturaPropostaId = 1,
+                CandidaturaPropostaId = context.Candidaturas.Count() + 1,
                 Aluno = contaAluno,
                 AlunoId = contaAluno.AlunoId,
+                AlunoNome = contaAluno.PrimeiroNome,
                 Aprovado = false,
                 PropostaId = propostaId,
                 Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
@@ -68,7 +69,7 @@ namespace PWEB_Estagios.Controllers
                 }
                 Console.Write(outputLines);
             }
-            return RedirectToAction("Ver", "Proposta");
+            return RedirectToAction("ListarCandidaturas", "Candidatura");
         }
 
         [Authorize(Roles = "Aluno")]
@@ -89,6 +90,61 @@ namespace PWEB_Estagios.Controllers
             }
 
             return View(minhasCandidaturas);
+        }
+
+        [Authorize(Roles = "Docente")]
+        public ActionResult ListarTodasCandidaturas()
+        {
+            return View(context.Candidaturas);
+        }
+        public ActionResult AprovarCandidatura(int candidaturaId)
+        {
+            CandidaturaProposta candidatura = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault();
+            candidatura.Aprovado = true;
+            context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        public ActionResult RecusarCandidatura(int candidaturaId)
+        {
+            context.Candidaturas.Remove(context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault());
+            context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        [Authorize(Roles = "Docente")]
+        public ActionResult AvaliarCandidatura()
+        {
+            return View(context.Candidaturas.Where(x => x.Aprovado == true));
+        }
+        public ActionResult Avaliar(int candidaturaId)
+        {
+            return View(context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault());
+        }
+        [HttpPost]
+        public ActionResult Avaliar(CandidaturaProposta candidatura)
+        {
+            if (candidatura != null)
+            {
+                CandidaturaProposta prop = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidatura.CandidaturaPropostaId).FirstOrDefault();
+                prop.NotaProposta = candidatura.NotaProposta;
+                if (ModelState.IsValid)
+                {
+                    var contaToUpdate = context.Propostas.Where(s => s.PropostaId == candidatura.PropostaId).FirstOrDefault();
+                    if (TryUpdateModel(contaToUpdate, "", new string[] { "NotaProposta" }))
+                    {
+                        try
+                        {
+                            context.SaveChanges();
+                            return RedirectToAction("Ver", "Proposta");
+                        }
+                        catch (Exception)
+                        {
+                            ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
+                        }
+                    }
+                    return RedirectToAction("Ver", "Proposta");
+                }
+            }
+            return RedirectToAction("Ver", "Proposta");
         }
     }
 }

@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EmpresaId)
+            @Html.DisplayNameFor(model => model.NomeEmpresa)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DocenteId)
+            @Html.DisplayNameFor(model => model.NomeDocente)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Aprovado)
@@ -41,10 +41,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EmpresaId)
+            @Html.DisplayFor(modelItem => item.NomeEmpresa)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DocenteId)
+            @Html.DisplayFor(modelItem => item.NomeDocente)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Aprovado)
@@ -65,8 +65,17 @@
             @Html.DisplayFor(modelItem => item.AnoLetivo)
         </td>
         <td>
-           @Html.ActionLink("<Aprovar>", "AprovarProposta", new { propostaId = item.PropostaId })
+            @Html.ActionLink("<Aprovar>", "AprovarProposta", new { propostaId = item.PropostaId })
         </td>
+        <td>
+            @Html.ActionLink("<Recusar>", "RecusarProposta", new { propostaId = item.PropostaId })
+        </td>
+        @if(item.Aprovado) { 
+         <td>
+         @Html.ActionLink("<Terminar>", "FimProposta", new { propostaId = item.PropostaId })
+         </td>
+        }
+        
     </tr>
 }
 

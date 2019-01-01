@@ -33,7 +33,7 @@ namespace PWEB_Estagios.Controllers
             IList<Proposta> listaPropostas = new List<Proposta>();
             foreach(Proposta i in context.Propostas)
             {
-                if (i.Aprovado)
+                if (i.Aprovado && !i.Ativo)
                 {
                     listaPropostas.Add(i);
                 }
@@ -48,14 +48,42 @@ namespace PWEB_Estagios.Controllers
         }
         [Authorize(Roles = "Docente")]
         public ActionResult VerComissao()
-        {
-            return View(context.Propostas);
+        { 
+        IList<Proposta> listaPropostas = new List<Proposta>();
+            foreach(Proposta i in context.Propostas)
+            {
+                if (!i.Ativo)
+                {
+                    listaPropostas.Add(i);
+                }
+            }
+            return View(listaPropostas);
         }
         public ActionResult AprovarProposta(int propostaId)
         {
             Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
             proposta.Aprovado = true;
             context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        //Falta Fazer
+        public ActionResult RecusarProposta(int propostaId)
+        {
+            Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
+            proposta.Aprovado = false;
+            proposta.Ativo = false;
+            context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        //Falta Fazer
+        public ActionResult FimProposta(int propostaId)
+        {
+            Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
+            if (proposta.Aprovado) {
+                proposta.Ativo = false;
+                context.SaveChanges();
+                return RedirectToAction("Avaliar", "Proposta", new { propostaId = propostaId });
+            }
             return RedirectToAction("Ver", "Proposta");
         }
         // GET: Proposta Create
@@ -108,8 +136,10 @@ namespace PWEB_Estagios.Controllers
                         PropostaId = 1,
                         Docente = context.Docentes.Where(x => x.NumeroDocente == docNum).First(),
                         DocenteId = docId,
+                        NomeDocente = context.Docentes.Where(x => x.NumeroDocente == docNum).FirstOrDefault().PrimeiroNome,
                         Empresa = context.Empresas.Where(x => x.EmpresaNIF == empreNif).First(),
                         EmpresaId = empreId,
+                        NomeEmpresa = context.Empresas.Where(x => x.EmpresaNIF == empreNif).FirstOrDefault().Nome,
                         Descricao = proposta.Descricao,
                         Tipo = proposta.Tipo,
                         Ramos = proposta.Ramos,
@@ -118,6 +148,8 @@ namespace PWEB_Estagios.Controllers
                         NumeroCadeirasMinimas = proposta.NumeroCadeirasMinimas,
                         AnoLetivo = DateTime.Now,
                         Aprovado = false,
+                        Ativo = true,
+                        NotaProposta = 0,
                         Alunos = new List<Aluno>(),
                         DocentesAuxiliares = new List<Docente>()
                     };
@@ -146,7 +178,7 @@ namespace PWEB_Estagios.Controllers
                 return RedirectToAction("Create", "Proposta");
             }
 
-        [Authorize(Roles = "Aluno")]
+        /*[Authorize(Roles = "Aluno")]
         public ActionResult Candidatura()
         {
             return View(context.Propostas);
@@ -156,9 +188,10 @@ namespace PWEB_Estagios.Controllers
         {
             string strCurrentUserId = User.Identity.GetUserId();
             Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
+
             CandidaturaProposta newCandidatura = new CandidaturaProposta()  
             {
-                CandidaturaPropostaId = 1,
+                CandidaturaPropostaId = context.Candidaturas.Count() + 1,
                 Aluno = contaAluno,
                 AlunoId = contaAluno.AlunoId,
                 Aprovado = false,
@@ -186,6 +219,6 @@ namespace PWEB_Estagios.Controllers
                 Console.Write(outputLines);
             }
             return RedirectToAction("Ver", "Proposta");
-        }
+        }*/
     }
     }
