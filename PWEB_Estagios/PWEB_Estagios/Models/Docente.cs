@@ -16,7 +16,7 @@ namespace PWEB_Estagios.Models
 
         [Required]
         [MaxLength(100)]
-        //[Display(Name = "Primeiro Nome")]
+        [Display(Name = "Primeiro Nome")]
         public string PrimeiroNome { get; set; }
 
         //[Required]

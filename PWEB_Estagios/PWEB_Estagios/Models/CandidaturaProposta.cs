@@ -17,11 +17,13 @@ namespace PWEB_Estagios.Models
 
         [Required]
         [ForeignKey("Proposta")]
+        [Display(Name = "Proposta ID")]
         public int PropostaId { get; set; }
         public Proposta Proposta { get; set; }
 
         [Required]
         [ForeignKey("Aluno")]
+        [Display(Name = "Aluno ID")]
         public int AlunoId { get; set; }
 
         public String AlunoNome { get; set; }
@@ -29,8 +31,12 @@ namespace PWEB_Estagios.Models
         public Aluno Aluno { get; set; }
 
         public Boolean Aprovado { get; set; } = false;
-
+        [Display(Name = "Nota")]
         public int NotaProposta { get; set; }
 
+        public CandidaturaProposta()
+        {
+
+        }
     }
 }

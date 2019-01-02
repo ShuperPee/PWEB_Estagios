@@ -149,7 +149,6 @@ namespace PWEB_Estagios.Controllers
                         AnoLetivo = DateTime.Now,
                         Aprovado = false,
                         Ativo = true,
-                        NotaProposta = 0,
                         Alunos = new List<Aluno>(),
                         DocentesAuxiliares = new List<Docente>()
                     };
@@ -171,54 +170,12 @@ namespace PWEB_Estagios.Controllers
                                 $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
                         }
                         Console.Write(outputLines);
+                        return RedirectToAction("Create", "Proposta");
                     }
                     return RedirectToAction("Ver", "Proposta");
                   }
                 }
                 return RedirectToAction("Create", "Proposta");
             }
-
-        /*[Authorize(Roles = "Aluno")]
-        public ActionResult Candidatura()
-        {
-            return View(context.Propostas);
         }
-
-        public ActionResult FazerCandidatura(int propostaId)
-        {
-            string strCurrentUserId = User.Identity.GetUserId();
-            Aluno contaAluno = context.Alunos.Where(s => s.UserId == strCurrentUserId).FirstOrDefault();
-
-            CandidaturaProposta newCandidatura = new CandidaturaProposta()  
-            {
-                CandidaturaPropostaId = context.Candidaturas.Count() + 1,
-                Aluno = contaAluno,
-                AlunoId = contaAluno.AlunoId,
-                Aprovado = false,
-                PropostaId = propostaId,
-                Proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault()
-            };
-            //contaAluno.CandidaturaProposta.Add(newCandidatura);
-            context.Candidaturas.Add(newCandidatura);
-            try
-            {
-                context.SaveChanges();
-            }
-            catch (DbEntityValidationException e)
-            {
-                //Create empty list to capture Validation error(s)
-                var outputLines = new List<string>();
-
-                foreach (var eve in e.EntityValidationErrors)
-                {
-                    outputLines.Add(
-                        $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
-                    outputLines.AddRange(eve.ValidationErrors.Select(ve =>
-                        $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
-                }
-                Console.Write(outputLines);
-            }
-            return RedirectToAction("Ver", "Proposta");
-        }*/
-    }
     }

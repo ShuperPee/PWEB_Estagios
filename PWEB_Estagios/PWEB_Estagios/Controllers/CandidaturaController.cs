@@ -100,15 +100,27 @@ namespace PWEB_Estagios.Controllers
         public ActionResult AprovarCandidatura(int candidaturaId)
         {
             CandidaturaProposta candidatura = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault();
+            if (candidatura.Aprovado)
+            {
+                TempData["msg"] = "<script>alert('A Candidatura já se encontra aprovada');</script>";
+                return RedirectToAction("ListarTodasCandidaturas", "Candidatura");
+            }else
             candidatura.Aprovado = true;
             context.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("ListarTodasCandidaturas", "Candidatura");
         }
         public ActionResult RecusarCandidatura(int candidaturaId)
         {
-            context.Candidaturas.Remove(context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault());
+            CandidaturaProposta candidatura = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault();
+            if (candidatura.Aprovado)
+            {
+                TempData["msg"] = "<script>alert('A Candidatura já se encontra aprovada');</script>";
+                return RedirectToAction("ListarTodasCandidaturas", "Candidatura");
+            }
+            else
+            context.Candidaturas.Remove(candidatura);
             context.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("ListarTodasCandidaturas", "Candidatura");
         }
         [Authorize(Roles = "Docente")]
         public ActionResult AvaliarCandidatura()
@@ -134,17 +146,22 @@ namespace PWEB_Estagios.Controllers
                         try
                         {
                             context.SaveChanges();
-                            return RedirectToAction("Ver", "Proposta");
+                            return RedirectToAction("AvaliacoesConcluidas", "Candidatura");
                         }
                         catch (Exception)
                         {
                             ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
                         }
                     }
-                    return RedirectToAction("Ver", "Proposta");
+                    return RedirectToAction("AvaliacoesConcluidas", "Candidatura");
                 }
             }
-            return RedirectToAction("Ver", "Proposta");
+            return RedirectToAction("AvaliacoesConcluidas", "Candidatura");
+        }
+
+        public ActionResult AvaliacoesConcluidas()
+        {
+            return View(context.Candidaturas.Where(x => x.NotaProposta > 0));
         }
     }
 }

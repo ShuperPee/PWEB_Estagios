@@ -82,10 +82,10 @@
                                 Candidaturas
                                 <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Ver Candidaturas", "", "")</li>
-                                <li>@Html.ActionLink("Fazer Avaliação", "", "")</li>
-                                <li>@Html.ActionLink("Ver Avaliações Concluidas", "", "")</li>
+                            <ul class="dropdown-menu">                                
+                                <li>@Html.ActionLink("Ver Candidaturas", "ListarTodasCandidaturas", "Candidatura")</li>
+                                <li>@Html.ActionLink("Fazer Avaliação", "AvaliarCandidatura", "Candidatura")</li>
+                                <li>@Html.ActionLink("Ver Estágios/Projetos Concluidos", "AvaliacoesConcluidas", "Candidatura")</li>
                             </ul>
                         </li>
                         <li class="dropdown">

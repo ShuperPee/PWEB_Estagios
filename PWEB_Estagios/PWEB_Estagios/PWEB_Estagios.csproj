@@ -315,6 +315,14 @@
     <Compile Include="Migrations\201901011753395_22.Designer.cs">
       <DependentUpon>201901011753395_22.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901012152060_model23.cs" />
+    <Compile Include="Migrations\201901012152060_model23.Designer.cs">
+      <DependentUpon>201901012152060_model23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901020031248_model24.cs" />
+    <Compile Include="Migrations\201901020031248_model24.Designer.cs">
+      <DependentUpon>201901020031248_model24.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -391,7 +399,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Aluno\Edit.cshtml" />
-    <Content Include="Views\Aluno\Avout.cshtml" />
     <Content Include="Views\Proposta\Create.cshtml" />
     <Content Include="Views\Empresa\Perfil.cshtml" />
     <Content Include="Views\Empresa\Edit.cshtml" />
@@ -405,6 +412,10 @@
     <Content Include="Views\Candidatura\ListarCandidaturas.cshtml" />
     <Content Include="Views\Proposta\Avaliar.cshtml" />
     <Content Include="Views\Candidatura\ListarTodasCandidaturas.cshtml" />
+    <Content Include="Views\Candidatura\Avaliar.cshtml" />
+    <Content Include="Views\Candidatura\AvaliarCandidatura.cshtml" />
+    <Content Include="Views\Candidatura\AvaliacoesConcluidas.cshtml" />
+    <Content Include="Views\Home\Estatisticas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -504,6 +515,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901011753395_22.resx">
       <DependentUpon>201901011753395_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901012152060_model23.resx">
+      <DependentUpon>201901012152060_model23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901020031248_model24.resx">
+      <DependentUpon>201901020031248_model24.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
