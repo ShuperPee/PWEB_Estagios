@@ -118,125 +118,6 @@ C:\Users\ShuperPee\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\ob
 C:\Users\ShuperPee\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.CopyComplete
 C:\Users\ShuperPee\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.dll
 C:\Users\ShuperPee\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.pdb
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\ApplicationInsights.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.pdb
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csc.exe
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csc.exe.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csc.rsp
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csi.exe
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csi.exe.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\csi.rsp
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.AppContext.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Console.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.IO.Compression.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.IO.Pipes.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Claims.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.ValueTuple.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Xml.XPath.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\vbc.exe
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\vbc.exe.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\vbc.rsp
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\VBCSCompiler.exe
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Antlr3.Runtime.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\EntityFramework.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\EntityFramework.SqlServer.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.Web.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.ApplicationInsights.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Newtonsoft.Json.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Owin.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Diagnostics.DiagnosticSource.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Helpers.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Mvc.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Optimization.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Razor.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.Deployment.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.Razor.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\WebGrease.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Helpers.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Mvc.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Optimization.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.Razor.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.Deployment.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Web.WebPages.Razor.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Newtonsoft.Json.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Antlr3.Runtime.pdb
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\EntityFramework.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\EntityFramework.SqlServer.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.AI.Web.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csprojResolveAssemblyReference.cache
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.CoreCompileInputs.cache
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.dll
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.pdb
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\ApplicationInsights.config
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll.config
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll
@@ -359,12 +240,6 @@ C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\o
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.pdb
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.GenerateResource.cache
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.csproj.GenerateResource.Cache
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo01.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo03.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo04.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model04.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo01.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo03.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo04.resources
@@ -376,24 +251,7 @@ C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\o
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model061.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model062.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model07.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo05.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo06.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.modelo061.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model06.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model061.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model062.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model07.resources
 C:\Users\Rui Santos\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model09.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model09.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model10.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model11.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model12.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model134.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model14.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model15.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model16.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model17.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model18.resources
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\ApplicationInsights.config
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll.config
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\bin\PWEB_Estagios.dll
@@ -542,10 +400,3 @@ C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagio
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model20.resources
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model21.resources
 C:\Users\Rui Santos\Documents\GitHub\Tp\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations._22.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model19.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model191.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model20.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model21.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations._22.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model23.resources
-C:\Users\pedro\Documents\GitHub\PWEB_Estagios\PWEB_Estagios\PWEB_Estagios\obj\Debug\PWEB_Estagios.Migrations.model24.resources

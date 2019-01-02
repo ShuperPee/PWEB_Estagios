@@ -32,7 +32,7 @@ namespace PWEB_Estagios.Controllers
         //falta fazer
         public ActionResult ListaPropostas()
         {
-            return View();
+            return View(context.Propostas.Where(x => x.Aprovado == true));
         }
 
         //falta fazer

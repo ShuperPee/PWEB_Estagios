@@ -33,7 +33,7 @@ namespace PWEB_Estagios.Controllers
             IList<Proposta> listaPropostas = new List<Proposta>();
             foreach(Proposta i in context.Propostas)
             {
-                if (i.Aprovado && !i.Ativo)
+                if (i.Aprovado && i.Ativo)
                 {
                     listaPropostas.Add(i);
                 }
@@ -52,37 +52,37 @@ namespace PWEB_Estagios.Controllers
         IList<Proposta> listaPropostas = new List<Proposta>();
             foreach(Proposta i in context.Propostas)
             {
-                if (!i.Ativo)
+                if (i.Ativo)
                 {
                     listaPropostas.Add(i);
                 }
             }
             return View(listaPropostas);
         }
+        [Authorize(Roles = "Docente")]
         public ActionResult AprovarProposta(int propostaId)
         {
             Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
             proposta.Aprovado = true;
             context.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Ver", "Proposta");
         }
-        //Falta Fazer
+        [Authorize(Roles = "Docente")]
         public ActionResult RecusarProposta(int propostaId)
         {
             Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
             proposta.Aprovado = false;
             proposta.Ativo = false;
             context.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Ver", "Proposta");
         }
-        //Falta Fazer
+        [Authorize(Roles = "Docente")]
         public ActionResult FimProposta(int propostaId)
         {
             Proposta proposta = context.Propostas.Where(x => x.PropostaId == propostaId).FirstOrDefault();
             if (proposta.Aprovado) {
                 proposta.Ativo = false;
                 context.SaveChanges();
-                return RedirectToAction("Avaliar", "Proposta", new { propostaId = propostaId });
             }
             return RedirectToAction("Ver", "Proposta");
         }
@@ -94,15 +94,19 @@ namespace PWEB_Estagios.Controllers
             IList<String> nomeEmpresas = new List<String>();
             IList<String> tipoProposta = new List<String>();
             IList<String> ramos = new List<String>();
+            string strCurrentUserId = User.Identity.GetUserId();
             foreach (var i in context.Docentes)
             {
-                //nomeDocentes.Add(i.PrimeiroNome+" " + i.Apelido + " : " + i.NumeroDocente);
                 nomeDocentes.Add(i.NumeroDocente.ToString());
             }
             foreach (var i in context.Empresas)
             {
-                //nomeEmpresas.Add(i.Nome + " " + i.Sede + " : " + i.EmpresaNIF);
                 nomeEmpresas.Add(i.EmpresaNIF.ToString());
+            }
+            if (User.IsInRole("Empresa"))
+            {
+                nomeEmpresas.Clear();
+                nomeEmpresas.Add(context.Empresas.Where(x => x.UserId == strCurrentUserId).FirstOrDefault().EmpresaNIF.ToString());
             }
             tipoProposta.Add(TipoProposta.Estagio.ToString());
             tipoProposta.Add(TipoProposta.Projeto.ToString());
@@ -157,19 +161,9 @@ namespace PWEB_Estagios.Controllers
                     {
                         context.SaveChanges();
                     }
-                    catch (DbEntityValidationException e)
+                    catch (Exception)
                     {
-                        //Create empty list to capture Validation error(s)
-                        var outputLines = new List<string>();
-
-                        foreach (var eve in e.EntityValidationErrors)
-                        {
-                            outputLines.Add(
-                                $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
-                            outputLines.AddRange(eve.ValidationErrors.Select(ve =>
-                                $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
-                        }
-                        Console.Write(outputLines);
+                        ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
                         return RedirectToAction("Create", "Proposta");
                     }
                     return RedirectToAction("Ver", "Proposta");

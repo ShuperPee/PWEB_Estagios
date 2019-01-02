@@ -24,7 +24,7 @@ namespace PWEB_Estagios.Controllers
         {
             return View(context.Propostas);
         }
-
+        [Authorize(Roles = "Aluno")]
         public ActionResult FazerCandidatura(int propostaId)
         {
             string strCurrentUserId = User.Identity.GetUserId();
@@ -55,19 +55,9 @@ namespace PWEB_Estagios.Controllers
             {
                 context.SaveChanges();
             }
-            catch (DbEntityValidationException e)
+            catch (Exception)
             {
-                //Create empty list to capture Validation error(s)
-                var outputLines = new List<string>();
-
-                foreach (var eve in e.EntityValidationErrors)
-                {
-                    outputLines.Add(
-                        $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
-                    outputLines.AddRange(eve.ValidationErrors.Select(ve =>
-                        $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
-                }
-                Console.Write(outputLines);
+                ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
             }
             return RedirectToAction("ListarCandidaturas", "Candidatura");
         }
@@ -97,6 +87,7 @@ namespace PWEB_Estagios.Controllers
         {
             return View(context.Candidaturas);
         }
+        [Authorize(Roles = "Docente")]
         public ActionResult AprovarCandidatura(int candidaturaId)
         {
             CandidaturaProposta candidatura = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault();
@@ -109,6 +100,7 @@ namespace PWEB_Estagios.Controllers
             context.SaveChanges();
             return RedirectToAction("ListarTodasCandidaturas", "Candidatura");
         }
+        [Authorize(Roles = "Docente")]
         public ActionResult RecusarCandidatura(int candidaturaId)
         {
             CandidaturaProposta candidatura = context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault();
@@ -127,6 +119,7 @@ namespace PWEB_Estagios.Controllers
         {
             return View(context.Candidaturas.Where(x => x.Aprovado == true));
         }
+        [Authorize(Roles = "Docente")]
         public ActionResult Avaliar(int candidaturaId)
         {
             return View(context.Candidaturas.Where(x => x.CandidaturaPropostaId == candidaturaId).FirstOrDefault());
@@ -162,6 +155,44 @@ namespace PWEB_Estagios.Controllers
         public ActionResult AvaliacoesConcluidas()
         {
             return View(context.Candidaturas.Where(x => x.NotaProposta > 0));
+        }
+        [Authorize(Roles = "Empresa")]
+        public ActionResult Candidatos()
+        {
+            IList<Aluno> listaAlunos = new List<Aluno>();
+            IList<Proposta> listaProposta = new List<Proposta>();
+            IList<CandidaturaProposta> listaCandidaturas = new List<CandidaturaProposta>();
+            string strCurrentUserId = User.Identity.GetUserId();
+            int empresaId = context.Empresas.Where(s => s.UserId == strCurrentUserId).FirstOrDefault().EmpresaId;
+
+            foreach (CandidaturaProposta i in context.Candidaturas)
+            {
+                listaCandidaturas.Add(i);
+            }
+            foreach (Proposta i in context.Propostas)
+            {
+                listaProposta.Add(i);
+            }
+
+            foreach (CandidaturaProposta i in listaCandidaturas)
+            {
+                foreach (Proposta y in listaProposta)
+                {
+                    if(i.PropostaId == y.PropostaId)
+                    {
+                        if(y.EmpresaId == empresaId)
+                        {
+                            Aluno aluno = context.Alunos.Where(x => x.AlunoId == i.AlunoId).FirstOrDefault();
+                            if (listaAlunos.IndexOf(aluno) == -1)
+                            {
+                                listaAlunos.Add(aluno);
+                            }
+                        }
+                    }
+                }
+                
+            }
+            return View(listaAlunos);
         }
     }
 }

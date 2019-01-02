@@ -9,7 +9,7 @@
 <div>
     <h4>Estatisticas</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
             @Html.DisplayNameFor(model => model.NAlunos)
         </dt>
@@ -49,15 +49,19 @@
         <dd>
             @Html.DisplayFor(model => model.NEmpresas)
         </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.EmpresaMaisProcurada)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.EmpresaMaisProcurada.Nome)
         </dd>
+
         <dt>
             @Html.DisplayName("ID Empresa")
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.EmpresaMaisProcurada.EmpresaId)
         </dd>
@@ -66,7 +70,3 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -97,17 +97,7 @@ namespace PWEB_Estagios.Controllers
                     }
                     catch (DbEntityValidationException e)
                     {
-                        //Create empty list to capture Validation error(s)
-                        var outputLines = new List<string>();
-
-                        foreach (var eve in e.EntityValidationErrors)
-                        {
-                            outputLines.Add(
-                                $"{DateTime.Now}: Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation errors:");
-                            outputLines.AddRange(eve.ValidationErrors.Select(ve =>
-                                $"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\""));
-                        }
-                        Console.Write(outputLines);
+                        ModelState.AddModelError("", "Não foi possivel atualizar o modelo!");
                     }
                     return RedirectToAction("LerMensagem", "Mensagem");
                 }
@@ -137,8 +127,14 @@ namespace PWEB_Estagios.Controllers
             {
                 if(i.DocentId == docId || i.AlunoId == alunoId)
                 {
+                    
                     listaMensagens.Add(i);
                 }
+            }
+            foreach(Mensagem i in listaMensagens)
+            {
+                i.Docente = context.Docentes.Where(x => x.DocenteId == i.DocentId).FirstOrDefault();
+                i.Aluno = context.Alunos.Where(x => x.AlunoId == i.AlunoId).FirstOrDefault();
             }
             return View(listaMensagens);
         }

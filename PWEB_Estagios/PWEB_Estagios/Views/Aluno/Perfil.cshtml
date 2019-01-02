@@ -9,7 +9,7 @@
 <div>
     <h4>Aluno</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
             @Html.DisplayNameFor(model => model.PrimeiroNome)
         </dt>
@@ -48,10 +48,9 @@
         <dd>
             @Html.DisplayFor(model => model.NumeroCadeirasConcluidas)
         </dd>
-    
+    </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit" ) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit" )
 </p>
 

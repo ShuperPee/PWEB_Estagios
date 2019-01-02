@@ -323,6 +323,10 @@
     <Compile Include="Migrations\201901020031248_model24.Designer.cs">
       <DependentUpon>201901020031248_model24.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901020241152_LastModel.cs" />
+    <Compile Include="Migrations\201901020241152_LastModel.Designer.cs">
+      <DependentUpon>201901020241152_LastModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -393,7 +397,6 @@
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
@@ -410,12 +413,13 @@
     <Content Include="Views\Mensagem\EscreverMensagem.cshtml" />
     <Content Include="Views\Mensagem\LerMensagem.cshtml" />
     <Content Include="Views\Candidatura\ListarCandidaturas.cshtml" />
-    <Content Include="Views\Proposta\Avaliar.cshtml" />
     <Content Include="Views\Candidatura\ListarTodasCandidaturas.cshtml" />
     <Content Include="Views\Candidatura\Avaliar.cshtml" />
     <Content Include="Views\Candidatura\AvaliarCandidatura.cshtml" />
     <Content Include="Views\Candidatura\AvaliacoesConcluidas.cshtml" />
     <Content Include="Views\Home\Estatisticas.cshtml" />
+    <Content Include="Views\Home\ListaPropostas.cshtml" />
+    <Content Include="Views\Candidatura\Candidatos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -521,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901020031248_model24.resx">
       <DependentUpon>201901020031248_model24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901020241152_LastModel.resx">
+      <DependentUpon>201901020241152_LastModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
